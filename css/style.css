@@ -280,6 +280,8 @@
 .Partiner_items {
     display: flex;
     gap: 20px;
+    width: 90%;
+    overflow: hidden;
 }
 
 .Partiner_items .item {
