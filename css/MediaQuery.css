@@ -112,6 +112,7 @@
     .item:hover .partiner-overlay {
         opacity: 0 !important;
     }
+ 
 
     @keyframes scroll-left {
         0% {
