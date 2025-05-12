@@ -281,8 +281,9 @@
     display: flex;
     gap: 20px;
     width: 90%;
-    overflow: hidden;
 }
+
+
 
 .Partiner_items .item {
     padding: 50px;
@@ -316,3 +317,36 @@
 .item:hover .partiner-overlay h3 {
     color: var(--bg-color-04);
 }
+
+
+
+
+
+
+/* about section */
+
+
+.content{
+    width: 100%;
+    max-width: 500px;
+    margin: auto;
+    transform: translateY(50%);
+}
+
+.content h2{
+    margin-top: 0;
+    margin-bottom: 0;
+    font-size: 48px;
+    font-weight: 700;
+    line-height: 1.12em;
+}
+.about-paragraph{
+    max-width: 459px;
+    margin-top: 16px;
+}
+
+.bordered{
+    padding-left: 25px;
+border: .5px solid rgba(0, 0, 0, 0.281)
+;}
+
