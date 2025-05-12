@@ -1,0 +1,73 @@
+/* ================= BURGER MENU =================== */
+.burger {
+    display: none;
+    flex-direction: column;
+    justify-content: space-between;
+    width: 24px;
+    height: 18px;
+    cursor: pointer;
+    z-index: 999;
+}
+
+.burger span {
+    height: 3px;
+    width: 100%;
+    background-color: white;
+    border-radius: 10px;
+}
+
+/* ============= RESPONSIVE NAVIGATION ============ */
+@media (max-width: 768px) {
+    .burger {
+        display: flex;
+        order: 1;
+    }
+
+    .nav-links-wrapper {
+        display: none;
+        flex-direction: column;
+        position: absolute;
+        top: 80px;
+        left: 0;
+        width: 100%;
+        background-color: var(--bg-color-05, #1c1c1c);
+        padding: 20px;
+        gap: 15px;
+        z-index: 998;
+    }
+
+    .nav-links-wrapper.active {
+        display: flex;
+    }
+    .nav-button-block{
+        margin:auto;
+    }
+
+    
+.hero-title-block h1 {
+    font-size: 30px;
+    font-weight: 700;
+    line-height: 1.11em;
+}
+
+
+
+.hero-description-block p {
+    font-size: 10px;
+    line-height: 1.55em;
+    color: #D9DFE0;
+}
+
+
+
+
+}
+
+
+@media (max-width: 1024px) {
+
+    .nav-button-block{
+        margin-left: 150px;
+    }
+}
+
