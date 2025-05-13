@@ -21,39 +21,41 @@ document.addEventListener("DOMContentLoaded", function () {
 
     window.addEventListener('resize', checkNavbar);
 
-    // ✅ Partner items scroll only below 1024px
-    function startPartnerScroll() {
-        const wrapper = document.querySelector(".Partiner_items");
-        if (!wrapper) return;
+    // ✅ Partner scroll only below 1024px
+    const wrapper = document.querySelector(".Partiner_items");
+    if (!wrapper) return;
 
-        // Reset any previous transform if any
-        wrapper.style.transform = '';
+    const mediaQuery = window.matchMedia("(max-width: 1024px)");
 
-        // If screen size is greater than 1024 → don't animate
-        if (window.innerWidth > 1024) return;
-
-        wrapper.innerHTML += wrapper.innerHTML; // duplicate items
-        let speed = 0.5;
-        let scrollAmount = 0;
-        let contentWidth = wrapper.scrollWidth / 2;
-
-        function scrollNews() {
-            scrollAmount += speed;
-            if (scrollAmount >= contentWidth) {
-                scrollAmount = 0;
-            }
-            wrapper.style.transform = `translateX(-${scrollAmount}px)`;
-            requestAnimationFrame(scrollNews);
+    function startScroll() {
+        if (!mediaQuery.matches) {
+            wrapper.style.transform = '';
+            return;
         }
 
-        scrollNews();
+        // duplicate once
+        if (!wrapper.dataset.duplicated) {
+            wrapper.innerHTML += wrapper.innerHTML;
+            wrapper.dataset.duplicated = "true";
+        }
+
+        let speed = 0.5;
+        let translateX = 0;
+        let scrollWidth = wrapper.scrollWidth / 2;
+
+        function scroll() {
+            translateX -= speed;
+            if (Math.abs(translateX) >= scrollWidth) {
+                translateX = 0;
+            }
+            wrapper.style.transform = `translateX(${translateX}px)`;
+            requestAnimationFrame(scroll);
+        }
+
+        scroll();
     }
 
-    startPartnerScroll();
+    startScroll();
 
-    // ✅ Also restart on resize
-    window.addEventListener('resize', function() {
-        // reload the page to restart animation properly OR
-        location.reload();   // safest way for your case
-    });
+    mediaQuery.addEventListener("change", startScroll);
 });

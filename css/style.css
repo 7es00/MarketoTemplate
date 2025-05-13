@@ -282,8 +282,9 @@
  justify-content: center;
  gap: 10px;
 }
-
-
+.container1{
+    overflow-x: hidden;
+}
 
 .Partiner_items .item {
     padding: 50px;

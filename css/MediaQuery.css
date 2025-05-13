@@ -80,22 +80,12 @@
     }
 
     .Partiner_items {
-        display: flex;
-        white-space: nowrap;
-        will-change: transform;
-        overflow: hidden;
-        /* ✅ أهم حاجة تمنع ظهور scrollbar */
+       display: flex;
+    white-space: nowrap;
+    will-change: transform;
     }
 
-    .Partiner_items .item {
-        flex: 0 0 auto;
-        margin-right: 60px;
-    }
-
-    .Partiner_items img {
-        max-height: 80px;
-        display: block;
-    }
+   
 
     @keyframes scroll-left {
         0% {
