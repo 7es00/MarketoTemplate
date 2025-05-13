@@ -278,9 +278,9 @@
 
 
 .Partiner_items {
- display: flex;
- justify-content: center;
- gap: 10px;
+    display: flex;
+    justify-content: center;
+    gap: 10px;
 }
 
 
@@ -325,39 +325,67 @@
 /* about section */
 
 
-.content{
-  
+.content {
+
     margin: auto;
     width: 100%;
     max-width: 500px;
 }
 
 
-.content h2{
+.content h2 {
     margin-top: 0;
     margin-bottom: 0;
     font-size: 48px;
     font-weight: 700;
     line-height: 1.12em;
     text-align: left;
-    
+
     line-height: 1.12em;
 }
-.about-paragraph{
+
+.about-paragraph {
     max-width: 459px;
     margin-top: 16px;
 }
 
-.bordered{
+.bordered {
     padding-left: 25px;
-border: .5px solid rgba(0, 0, 0, 0.281);
+    border: .5px solid rgba(0, 0, 0, 0.281);
 }
 
 
+
+
+
+.image-main {
+    position: relative;
+    display: inline-block;
+}
+
+.image-main img.about-image {
+    display: block;
+    width: 100%;
+    height: auto;
+}
+
+/* الصور الصغيرة فوق الصورة الكبيرة */
+.overlay-img {
+    position: absolute;
+    transform: translate(-50%, -50%);
+    border-radius: 50%;
+    object-fit: cover;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+}
+
+
+
+
+/* 
 #about .raiseimg {
     position: absolute;
     left: 3%;
-    top: 14%;     /* بدل 80px */
+    top: 14%;     
 }
 #about .about-image-wrapper{
     align-items: center;
@@ -385,4 +413,4 @@ border: .5px solid rgba(0, 0, 0, 0.281);
     height: 18%;
     border-radius: 50%;
     margin-left: -10px;
-}
+} */

@@ -79,16 +79,22 @@
         width: 100%;
     }
 
-    .Partiner_items {
-       display: flex;
-    white-space: nowrap;
-    will-change: transform;
+    .container1 {
+        width: 100%;
+        overflow: hidden;
+        margin: auto;
     }
 
-    .partiner-overlay{
+    .Partiner_items {
+        display: flex;
+        white-space: nowrap;
+        will-change: transform;
+    }
+
+    .partiner-overlay {
         display: none;
     }
-   
+
 
     @keyframes scroll-left {
         0% {
