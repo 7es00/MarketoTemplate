@@ -22,7 +22,7 @@
         display: flex;
         order: 1;
     }
-
+/* navbar*/
     .nav-links-wrapper {
         position: absolute;
         top: 80px;
@@ -60,7 +60,7 @@
         line-height: 1.55em;
         color: #D9DFE0;
     }
-
+    /* partner section */
     /* Hide partner overlay on small screens */
     .partiner-overlay {
         display: none !important;
@@ -68,6 +68,7 @@
 }
 
 @media (max-width: 1024px) {
+    /* navbar*/
     .nav-button-block {
         margin-left: 150px;
     }
@@ -106,4 +107,6 @@
         }
     }
 
+
+    /* about section */
 }

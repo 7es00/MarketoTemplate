@@ -9,6 +9,7 @@
     --text-color-04: #505559;
     --bg-color-05: #1c1c1c;
     --bg-color-03: #eef2f5;
+    --section-bg-color:#F5F5F5;
     --white: white;
     --text-color-03: #25282b;
     --text-color-05: #abafb4;
@@ -22,6 +23,9 @@
     --bg-color-06: #3248f6;
     --bg-color-01: #232323;
     --text-color-06: #dce2e9;
+}
+.bg-section-color{
+    background-color: var(--section-bg-color);
 }
 
 .d-flex {
@@ -380,37 +384,30 @@
 
 
 
-
-/* 
-#about .raiseimg {
-    position: absolute;
-    left: 3%;
-    top: 14%;     
+/* our services section */
+#ourservices{
+    height: 100vh;
 }
-#about .about-image-wrapper{
-    align-items: center;
-    align-content: center ;
+.icon{
+    font-size: 20px;
+    text-align: center;
+    margin:auto;
+    width: 100%;
 }
-#about .about-images {
-    position: relative;
-}
-#about .raiseimg img{
-    width: 139%;
-    height: 139%;
-}
-#about .about-image {
-    width: 80%;
-    height: 80%;
-}
-#about .second-imgs {
-    position: absolute;
-    left: 20%;
-    top: 1%;
+#ourservices .ourServiceText{
+    text-align: center;
+    margin-top: 100px;
 }
 
-#about .second-imgs img{
-    width: 18%;
-    height: 18%;
-    border-radius: 50%;
-    margin-left: -10px;
-} */
+#ourservices .ourServiceText h1{
+    font-size: 48px;
+    font-weight: 700;
+}
+
+#ourservices .ourServiceText p{
+    font-size: 18px;
+    font-weight: 400;
+    max-width: 600px;
+    margin: auto;
+}
+
